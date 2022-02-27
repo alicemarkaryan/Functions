@@ -27,7 +27,7 @@ namespace Functions
             Console.WriteLine("Please entre the text");
             string d = Console.ReadLine();
             SpaceString(d);
-           // Task5
+            // Task5
             Console.WriteLine("Please entre the first number...");
             int s = int.Parse(Console.ReadLine());
             Console.WriteLine("please enttre second number...");
@@ -77,6 +77,17 @@ namespace Functions
             int h = int.Parse(Console.ReadLine());
             Fibona(h);
 
+            //Task FUncMeth
+
+            Console.WriteLine(FuncMeth(8, 9));
+
+            //TAsk muchFunc
+
+            int[] arr = { ArrayFunc(10,9), ArrayFunc1(9,7), ArrayFunc2(4,5), ArrayFunc3(9,3) };
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
 
         }
         //Task 1
@@ -117,13 +128,13 @@ namespace Functions
         public static int SumArray(int a, int b)
         {
             int sum = 0;
-           int[,] array = new int[a, b];
-            for (int i = 0; i < b+1; i++)
+            int[,] array = new int[a, b];
+            for (int i = 0; i < b + 1; i++)
             {
-                for (int j = 0; j < a+1; j++)
+                for (int j = 0; j < a + 1; j++)
                 {
                     Console.WriteLine("please entre the numbers...");
-                    array[i,j] = int.Parse(Console.ReadLine());
+                    array[i, j] = int.Parse(Console.ReadLine());
                     sum += array[i, j];
                 }
 
@@ -258,6 +269,38 @@ namespace Functions
         //    return "Hello";
         //}
 
+        public static int FuncMeth(int a, int b)
+        {  
+               int YesimInch(int c, int x)
+            {
+               
+                int sub = c - x;
+                return sub;
+            }
+            return a + b + (YesimInch(a, b));
+        }
+
+        public static int ArrayFunc(int a, int b)
+        {
+           return a + b;
+         
+        }
+
+        public static int ArrayFunc1(int a, int b)
+        {
+           return a - b;
+            
+        }
+        public static int ArrayFunc2(int a, int b)
+        {
+            return  a * b;
+           
+        }
+        public static int ArrayFunc3(int a, int b)
+        {
+            return  a / b;
+            
+        }
 
     }
 }
